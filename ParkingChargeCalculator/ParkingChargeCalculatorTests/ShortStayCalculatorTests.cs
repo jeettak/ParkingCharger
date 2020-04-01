@@ -50,6 +50,7 @@ namespace ParkingChargeCalculatorTests
         [TestCase("04/09/2017 16:50:00", "08/09/2017 19:15:00", 34.28)]
         [TestCase("07/09/2017 16:50:00", "09/09/2017 19:15:00", 12.28)]
         [TestCase("04/09/2017 13:50:00", "08/09/2017 22:45:00", 37.58)]
+        [TestCase("09/09/2017 08:50:00", "10/09/2017 17:45:00", 00.00)]
         public void Valid_ParkingDates_Returns_Correct_ParkingCharge(string startDate, string endDate, double expectedCharge)
         {
             // Arrange and Act

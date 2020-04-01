@@ -1,4 +1,5 @@
-﻿using ParkingChargeCalculator.Interfaces;
+﻿using ParkingChargeCalculator.Exceptions;
+using ParkingChargeCalculator.Interfaces;
 using ParkingChargeCalculator.Models;
 
 namespace ParkingChargeCalculator
@@ -11,7 +12,7 @@ namespace ParkingChargeCalculator
             {
                 ParkingType.ShortStay => new ShortStayCalculator(),
                 ParkingType.LongStay => new LongStayCalculator(),
-                _ => new ShortStayCalculator()
+                _ => throw new ParkingTypeNotSupportedException($"{parkingType} is not supported.")
             };
         }
     }

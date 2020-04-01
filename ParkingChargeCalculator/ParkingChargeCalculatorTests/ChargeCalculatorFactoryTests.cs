@@ -42,18 +42,5 @@ namespace ParkingChargeCalculatorTests
             // Assert
             chargeCalculator.Should().BeOfType<LongStayCalculator>();
         }
-
-        [Test]
-        public void NoCharge_ParkingType_Returns_ShortStayCalculator()
-        {
-            // Arrange
-            var parkingType = ParkingType.NoCharge;
-
-            // Act
-            var chargeCalculator = _sut.GetParkingCalculator(parkingType);
-
-            // Assert
-            chargeCalculator.Should().BeOfType<ShortStayCalculator>();
-        }
     }
 }
