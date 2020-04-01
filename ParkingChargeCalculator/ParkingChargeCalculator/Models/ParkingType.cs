@@ -2,7 +2,6 @@
 {
     public enum ParkingType
     {
-        NoCharge,
         ShortStay,
         LongStay
     }
